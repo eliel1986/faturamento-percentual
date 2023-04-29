@@ -17,17 +17,15 @@
         <header>
             <h1>Faturamento</h1>
         </header>
-        <form id="form">
+        <form id="form" class="">
             <p>Preencha os dados</p>
             <div class="form-control">
-                <input type="text" id="input" placeholder="Densidade de origem" />
-                <!-- <button type="submit">
-                    <i class="fa-thin fa-plus"></i>
-                </button> -->
-                <input type="text" id="input" placeholder="Densidade de destino" />
-                <input type="text" id="input" placeholder="Peso de origem" />
-                <input type="text" id="input" placeholder="Peso de destino" />
+                <input type="number" id="dens-orig" placeholder="Densidade de origem" />
+                <input type="number" id="dens-dest" placeholder="Densidade de destino" />
+                <input type="number" id="peso-orig" placeholder="Peso de origem" />
+                <input type="number" id="peso-dest" placeholder="Peso de destino" />
                 <button class="calcular">Calcular</button>
+                <button class="calcular">Limpar</button>
             </div>
         </form>
     </div>
