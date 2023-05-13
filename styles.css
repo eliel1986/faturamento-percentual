@@ -12,7 +12,7 @@ html {
     }
 
     @media screen and (min-width: 576px) and (max-width: 767.98px) {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -20,7 +20,7 @@ html {
     }
 
     @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-        font-size: 14px;
+        font-size: 26px;
     }
 
     @media screen and (min-width: 1200px) {
