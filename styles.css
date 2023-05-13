@@ -56,6 +56,11 @@ html {
     height: 2.4rem;
 }
 
+.preenchimento p {
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
 .resposta {
     max-width: 25rem;
     height: 27rem;
