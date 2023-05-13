@@ -11,7 +11,7 @@ const volDren = document.querySelector("#vol-dren");
 
 const calcular = (number) => {
 
-    if (vol_vinte_orig !== '' && vol_V_Uni !== '' && dens_V_Uni !== '' && pesoOrig && pesoUni && volDren) {
+    // if (vol_vinte_orig !== '' && vol_V_Uni !== '' && dens_V_Uni !== '' && pesoOrig && pesoUni && volDren) { 
 
     // const geral = document.createElement("div");
     // geral.classList.add("resposta");
@@ -51,7 +51,7 @@ const calcular = (number) => {
         document.getElementById("aaa").style.backgroundColor = "red";
     }
 
-}
+//}
 
 
 }
@@ -59,10 +59,12 @@ const calcular = (number) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const result = vol_vinte_orig.value;
+    const vv = vol_vinte_orig.value;
+    const vvu = vol_V_Uni.value;
 
-    if(result) {
-        calcular(result);
+
+    if(vv && vvu) {
+        calcular(vv);
     }
 });
 
