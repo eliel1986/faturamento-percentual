@@ -37,7 +37,7 @@ html {
 .preenchimento {
     max-width: 25rem;
     height: 27rem;
-    margin: 1.1rem auto;
+    margin: 0.9rem auto;
     background-color: #daecf6;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -59,7 +59,7 @@ html {
 .resposta {
     max-width: 25rem;
     height: 27rem;
-    margin: 1.1rem auto;
+    margin: 0.9rem auto;
     /*background-color: #fdfdfd;*/
     padding: 1rem;
     border-radius: 0.5rem;
