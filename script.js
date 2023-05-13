@@ -11,6 +11,8 @@ const volDren = document.querySelector("#vol-dren");
 
 const calcular = (number) => {
 
+    if (vol_vinte_orig !== '' && vol_V_Uni !== '' && dens_V_Uni !== '' && pesoOrig && pesoUni && volDren) {
+
     // const geral = document.createElement("div");
     // geral.classList.add("resposta");
     document.getElementById("bbb").style.display = "none";
@@ -49,7 +51,7 @@ const calcular = (number) => {
         document.getElementById("aaa").style.backgroundColor = "red";
     }
 
-    
+}
 
 
 }
