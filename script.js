@@ -13,7 +13,9 @@ const calcular = (number) => {
 
     // const geral = document.createElement("div");
     // geral.classList.add("resposta");
+    document.getElementById("bbb").style.display = "none";
     document.getElementById("aaa").style.display = "block";
+
 
 
     // const dif = document.createElement("input");
