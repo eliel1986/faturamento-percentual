@@ -70,9 +70,13 @@ html {
 
 .resposta header {
     text-align: center;
-    color: white;
+    /*color: white;*/
     padding: 0 0.5rem 0.5rem;
     border-bottom: 0.15rem solid #ccc;
+}
+
+.resposta h2 {
+    color: white;
 }
 
 /*
