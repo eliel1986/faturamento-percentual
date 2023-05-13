@@ -24,7 +24,7 @@ html {
     }
 
     @media screen and (min-width: 1200px) {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
@@ -32,7 +32,7 @@ html {
     max-width: 25rem;
     height: 26rem;
     margin: 3rem auto;
-    background-color: #c5eceb;
+    background-color: #dceef0;
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid black;
