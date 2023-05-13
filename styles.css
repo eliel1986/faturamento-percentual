@@ -30,23 +30,23 @@ html {
 
 .preenchimento {
     max-width: 25rem;
-    height: 25rem;
+    height: 28rem;
     margin: 3rem auto;
     background-color: #fdfdfd;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid black;
 }
 
 .preenchimento header {
     text-align: center;
-    padding: 0 1rem 1rem;
+    padding: 0 0.5rem 0.5rem;
     border-bottom: 0.15rem solid #ccc;
 }
 
 .resposta {
     max-width: 20rem;
-    height: 20rem;
+    height: 24rem;
     margin: 2rem auto;
     background-color: #fdfdfd;
     padding: 1rem;
@@ -61,7 +61,17 @@ html {
     border-bottom: 0.1rem solid #ccc;
 }
 
-#form p {
+.resposta p {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/* .resposta input {
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+} */
+
+.preenchimento p {
     text-align: center;
     margin-top: 1rem;
 }
@@ -85,6 +95,28 @@ html {
     text-align: center;
     font-size: 0.8rem;
     margin-bottom: 0.7rem;
+    border-radius: 0.3rem;
+}
+
+.form-controla {
+    /* height: 25rem; */
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .hide {
+    display: none;
+} */
+
+.form-controla input {
+    padding: 0.2rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
     border-radius: 0.3rem;
 }
 
