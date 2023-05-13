@@ -26,7 +26,7 @@ const calcular = (number) => {
     const dif_vol_vinte = vol_vinte_orig.value - vol_V_Uni.value;
     document.getElementById('dif_vol_vinte').value = `${dif_vol_vinte} litros`;
 
-    const dif_litros_vol = (dif_vol_vinte / vol_vinte_orig.value).toFixed(2)
+    const dif_litros_vol = ((dif_vol_vinte / vol_vinte_orig.value)*100).toFixed(2)
     document.getElementById('dif_vol_litros').value = `${dif_litros_vol} %`;
 
     const dif_peso = pesoOrig.value - pesoUni.value
