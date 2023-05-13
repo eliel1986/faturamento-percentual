@@ -24,8 +24,14 @@ html {
     }
 
     @media screen and (min-width: 1200px) {
-        font-size: 22px;
+        font-size: 22px; /*notebook*/
     }
+
+    @media screen and (min-width: 1800px) {
+        font-size: 28px; /*tela grande*/
+    }
+
+
 }
 
 .preenchimento {
