@@ -45,6 +45,17 @@ html {
 }
 
 .resposta {
+    max-width: 25rem;
+    height: 28rem;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+
+/*
+.resposta {
     max-width: 20rem;
     height: 26rem;
     margin: 2rem auto;
@@ -54,12 +65,21 @@ html {
     border: 1px solid black;
     display: none;
 }
+*/
 
+.resposta header {
+    text-align: center;
+    padding: 0 0.5rem 0.5rem;
+    border-bottom: 0.15rem solid #ccc;
+}
+
+/*
 .resposta header {
     text-align: center;
     padding: 0 0.7rem 0.7rem;
     border-bottom: 0.1rem solid #ccc;
 }
+*/
 
 .resposta p {
     font-size: 0.8rem;
