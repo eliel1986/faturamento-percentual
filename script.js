@@ -38,7 +38,7 @@ const calcular = (number) => {
     const dif_litros_dreno = Number(dif_litros_peso) + Number(volDren.value)
     document.getElementById('desc_falta').value = `${dif_litros_dreno} litros`;
 
-    const perc_result = (((dif_vol_vinte - dif_litros_dreno) / vol_V_Uni.value)*100).toFixed(2)
+    const perc_result = (((dif_vol_vinte - dif_litros_dreno) / vol_vinte_orig.value)*100).toFixed(2)
     document.getElementById('perc_falta').value = `${perc_result} %`;
 
     if (perc_result >= -0.4 && perc_result <= 0.4) {
