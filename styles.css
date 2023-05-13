@@ -154,6 +154,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.4s;
+    margin-top: 1rem;
     margin-bottom: 0.7rem;
 }
 
@@ -161,9 +162,5 @@ button:hover {
     background-color: #102f5e;
     color: #fff;
     font-weight: bold;
-}
-
-.form-controla button {
-    margin-top: 1rem;
 }
 
