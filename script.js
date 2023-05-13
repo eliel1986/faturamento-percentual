@@ -41,7 +41,7 @@ const calcular = (number) => {
     const perc_result = (((dif_vol_vinte - dif_litros_dreno) / vol_V_Uni.value)*100).toFixed(2)
     document.getElementById('perc_falta').value = `${perc_result} %`;
 
-    if (perc_result <= 0.4 || perc_result <= -0.4) {
+    if (perc_result <= 0.4 || perc_result >= -0.4) {
         document.getElementById("aaa").style.backgroundColor = "green";
     } else {
         document.getElementById("aaa").style.backgroundColor = "red";
