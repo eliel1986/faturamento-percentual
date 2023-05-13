@@ -39,6 +39,7 @@ html {
 }
 
 .preenchimento header {
+    display: flex;
     text-align: center;
     padding: 0 0.5rem 0.5rem;
     border-bottom: 0.15rem solid #ccc;
