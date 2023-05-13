@@ -163,3 +163,7 @@ button:hover {
     font-weight: bold;
 }
 
+.form-controla button {
+    margin-top: 1rem;
+}
+
