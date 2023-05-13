@@ -61,9 +61,13 @@ form.addEventListener("submit", (e) => {
 
     const vv = vol_vinte_orig.value;
     const vvu = vol_V_Uni.value;
+    const dvu = dens_V_Uni.value;
+    const po = pesoOrig.value;
+    const pu = pesoUni.value;
+    const vd = volDren.value;
 
 
-    if(vv && vvu) {
+    if(vv && vvu && dvu && po && pu && vd) {
         calcular(vv);
     }
 });
