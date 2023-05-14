@@ -14,51 +14,46 @@
 </head>
 
 <body>
-    <div class="preenchimento" id="bbb">
+    <div class="form-principal" id="form-principal">
         <header>
             <img src="logo.png" alt="">
-          <!--  <h2>Faturamento</h2> -->
         </header>
         <form id="form" class="">
             <p>Preencha todos campos</p>
-            <div class="form-control">
-                <input type="number" id="vol-vinte-origem" placeholder="Volume a 20 °C origem" />
-                <input type="number" id="vol-vinte-uni" placeholder="Volume a 20 °C UNI" />
-                <input type="number" id="dens-vinte-uni" placeholder="Densidade a 20 °C UNI" />
-                <input type="number" id="peso-orig" placeholder="Peso origem" />
-                <input type="number" id="peso-uni" placeholder="Peso UNI" />
-                <input type="number" id="vol-dren" placeholder="Volume drenado" />
+            <div class="form-preencher">
+                <input type="number" id="vol-vinte-origem" placeholder="Volume a 20 °C origem" required />
+                <input type="number" id="vol-vinte-uni" placeholder="Volume a 20 °C UNI" required />
+                <input type="number" id="dens-vinte-uni" placeholder="Densidade a 20 °C UNI" required />
+                <input type="number" id="peso-orig" placeholder="Peso origem" required />
+                <input type="number" id="peso-uni" placeholder="Peso UNI" required />
+                <input type="number" id="vol-dren" placeholder="Volume drenado" required />
                 <button type="submit">Calcular</button>
-                <p>By Eliel Silva</p>
-               <!-- <button onclick="reset">Limpar</button> -->
+                <!-- <p>By Eliel Silva</p> -->
             </div>
         </form>
     </div>
-    <div class="resposta" id="aaa">
+    <div class="resposta" id="resposta">
         <header>
             <h2>Resultado</h2>
         </header>
         <form id="form" class="">
-            <div class="form-controla">
-                <p>Diferença VOLUME A 20 °C</p>
+            <div class="form-resposta">
+                <p>Diferença VOLUME A 20 °C (LITROS)</p>
                 <input type="" id="dif_vol_vinte">
-                <p>Diferença litros (VOLUME)</p>
+                <p>Diferença VOLUME A 20 °C (%)</p>
                 <input type="" id="dif_vol_litros">
                 <p>Diferença (PESO)</p>
                 <input type="" id="dif_peso">
                 <p>Diferença litros (PESO)</p>
                 <input type="" id="dif_litros_peso">
-                <p>Desconto (FALTA)</p>
+                <p>Desconto (DRENAGEM + DIF. PESO)</p>
                 <input type="" id="desc_falta">
-                <p>Percentual (%)</p>
+                <p>Percentual FALTA (%)</p>
                 <input type="" id="perc_falta">
-                <!-- <div class="abc"></div> -->
-                <button>Voltar  </button>
+                <button>Voltar </button>
             </div>
         </form>
     </div>
-    
-
 </body>
 
 </html>

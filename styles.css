@@ -34,7 +34,7 @@ html {
 
 }
 
-.preenchimento {
+.form-principal {
     max-width: 25rem;
     height: 27rem;
     margin: 0.9rem auto;
@@ -44,20 +44,19 @@ html {
     border: 1px solid black;
 }
 
-.preenchimento header {
-   /* display: flex;*/
+.form-principal header {
     text-align: center;
     padding: 0 0.2rem 0.2rem;
     border-bottom: 0.15rem solid #ccc;
 }
 
-.preenchimento header img {
+.form-principal header img {
     width: 4.4rem;
     height: 2.4rem;
 }
 
-.preenchimento p {
-    font-size: 0.5rem;
+.form-principal p {
+    font-size: 0.8rem;
     font-weight: bold;    
     text-align: center;
     margin-top: 0.7rem;
@@ -74,22 +73,8 @@ html {
     display: none;
 }
 
-/*
-.resposta {
-    max-width: 20rem;
-    height: 26rem;
-    margin: 2rem auto;
-    background-color: #fdfdfd;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid black;
-    display: none;
-}
-*/
-
 .resposta header {
     text-align: center;
-    /*color: white;*/
     padding: 0 0.5rem 0.5rem;
     border-bottom: 0.15rem solid #ccc;
 }
@@ -98,14 +83,6 @@ html {
     color: white;
 }
 
-/*
-.resposta header {
-    text-align: center;
-    padding: 0 0.7rem 0.7rem;
-    border-bottom: 0.1rem solid #ccc;
-}
-*/
-
 .resposta p {
     font-size: 0.8rem;
     font-weight: bold;
@@ -113,12 +90,7 @@ html {
     margin-bottom: 0.2rem;
 }
 
-/* .resposta input {
-    margin-bottom: 0.1rem;
-    margin-top: 0.1rem;
-} */
-
-.form-control {
+.form-preencher{
     height: 12rem;
     margin-top: 1rem;
     display: flex;
@@ -127,11 +99,7 @@ html {
     align-items: center;
 }
 
-/* .hide {
-    display: none;
-} */
-
-.form-control input {
+.form-preencher input {
     padding: 0.4rem;
     width: 10rem;
     text-align: center;
@@ -140,8 +108,7 @@ html {
     border-radius: 0.3rem;
 }
 
-.form-controla {
-    /* height: 25rem; */
+.form-resposta {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -149,11 +116,7 @@ html {
     align-items: center;
 }
 
-/* .hide {
-    display: none;
-} */
-
-.form-controla input {
+.form-resposta input {
     padding: 0.2rem;
     width: 8rem;
     text-align: center;
@@ -176,7 +139,6 @@ button {
     align-items: center;
     transition: 0.4s;
     margin-top: 0.8rem;
-  /*  margin-bottom: 1rem; */
 }
 
 button:hover {

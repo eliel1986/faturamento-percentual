@@ -1,5 +1,4 @@
 const form = document.querySelector("#form");
-
 const vol_vinte_orig = document.querySelector("#vol-vinte-origem");
 const vol_V_Uni = document.querySelector("#vol-vinte-uni");
 const dens_V_Uni = document.querySelector("#dens-vinte-uni");
@@ -7,25 +6,10 @@ const pesoOrig = document.querySelector("#peso-orig");
 const pesoUni = document.querySelector("#peso-uni");
 const volDren = document.querySelector("#vol-dren");
 
-// const divteste = document.querySelector(".container");
-
 const calcular = (number) => {
 
-    // if (vol_vinte_orig !== '' && vol_V_Uni !== '' && dens_V_Uni !== '' && pesoOrig && pesoUni && volDren) { 
-
-    // const geral = document.createElement("div");
-    // geral.classList.add("resposta");
-    document.getElementById("bbb").style.display = "none";
-    document.getElementById("aaa").style.display = "block";
-
-
-
-    // const dif = document.createElement("input");
-    // dif.classList.add("abc");
-    // dif.value = number;
-    // geral.appendChild(dif);
-
-    // divteste.appendChild(geral);
+    document.getElementById("form-principal").style.display = "none";
+    document.getElementById("resposta").style.display = "block";
 
     const dif_vol_vinte = vol_vinte_orig.value - vol_V_Uni.value;
     document.getElementById('dif_vol_vinte').value = `${dif_vol_vinte} litros`;
@@ -46,13 +30,10 @@ const calcular = (number) => {
     document.getElementById('perc_falta').value = `${perc_result} %`;
 
     if (perc_result >= -0.4 && perc_result <= 0.4) {
-        document.getElementById("aaa").style.backgroundColor = "green";
+        document.getElementById("resposta").style.backgroundColor = "green";
     } else {
-        document.getElementById("aaa").style.backgroundColor = "red";
+        document.getElementById("resposta").style.backgroundColor = "red";
     }
-
-//}
-
 
 }
 
@@ -71,13 +52,3 @@ form.addEventListener("submit", (e) => {
         calcular(vv);
     }
 });
-
-// function reset() {
-
-//     vol_vinte_orig = '';
-//     vol_V_Uni = '';
-//     dens_V_Uni = '';
-//     pesoOrig = '';
-//     pesoUni = '';
-//     volDren = '';
-// }
