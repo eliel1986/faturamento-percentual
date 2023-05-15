@@ -23,7 +23,7 @@ const calcular = (number) => {
     const dif_litros_peso = (dif_peso / (dens_V_Uni.value / 1000)).toFixed(0)
     document.getElementById('dif_litros_peso').value = `${dif_litros_peso} litros`;
 
-    if (str.match(".") || str.match(",")) {
+    if (number.match(".") || number.match(",")) {
 
     (dif_peso / dens_V_Uni.value).toFixed(0)
     document.getElementById('dif_litros_peso').value = `${dif_litros_peso} litros`;}
