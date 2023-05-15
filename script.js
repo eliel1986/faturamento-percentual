@@ -20,7 +20,7 @@ const calcular = (number) => {
     const dif_peso = pesoOrig.value - pesoUni.value
     document.getElementById('dif_peso').value = `${dif_peso} Kilos`;
 
-    const dif_litros_peso = (dif_peso / (dens_V_Uni.value / 1000)).toFixed(0)
+    const dif_litros_peso = (dif_peso / (dens_V_Uni.value)).toFixed(0)
     document.getElementById('dif_litros_peso').value = `${dif_litros_peso} litros`;
 
     const dif_litros_dreno = Number(dif_litros_peso) + Number(volDren.value)
