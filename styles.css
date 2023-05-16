@@ -7,7 +7,11 @@
 }
 
 html {
-    @media screen and (max-width: 575.98px) {
+    @media screen and (min-width: 100px) and (max-width: 350px) {
+        font-size: 10px;
+    } 
+
+    @media screen and (min-width: 351px) and (max-width: 575.98px) {
         font-size: 14.8px; /*redmi note 11 pro 5G*/
     }
 
