@@ -1,35 +1,35 @@
 const form = document.querySelector("#form");
-const vol_vinte_orig = document.querySelector("#vol-vinte-origem");
-const vol_V_Uni = document.querySelector("#vol-vinte-uni");
-const dens_V_Uni = document.querySelector("#dens-vinte-uni");
-const pesoOrig = document.querySelector("#peso-orig");
-const pesoUni = document.querySelector("#peso-uni");
-const volDren = document.querySelector("#vol-dren");
+const volume_vinte_origem = document.querySelector("#volume_vinte_origem");
+const volume_vinte_uni = document.querySelector("#volume_vinte_uni");
+const densidade_vinte_uni = document.querySelector("#densidade_vinte_uni");
+const peso_origem = document.querySelector("#peso_origem");
+const peso_uni = document.querySelector("#peso_uni");
+const volume_drenado = document.querySelector("#volume_drenado");
 
 const calcular = (number) => {
 
-    document.getElementById("form-principal").style.display = "none";
+    document.getElementById("formulario_principal").style.display = "none";
     document.getElementById("resposta").style.display = "block";
 
-    const dif_vol_vinte = vol_vinte_orig.value - vol_V_Uni.value;
-    document.getElementById('dif_vol_vinte').value = `${dif_vol_vinte} litros`;
+    const diferenca_volume_vinte = volume_vinte_origem.value - volume_vinte_uni.value;
+    document.getElementById('diferenca_volume_vinte').value = `${diferenca_volume_vinte} litros`;
 
-    const dif_litros_vol = ((dif_vol_vinte / vol_vinte_orig.value)*100).toFixed(2)
-    document.getElementById('dif_vol_litros').value = `${dif_litros_vol} %`;
+    const diferenca_litros_volume = ((diferenca_volume_vinte / volume_vinte_origem.value) * 100).toFixed(2)
+    document.getElementById('diferenca_litros_volume').value = `${diferenca_litros_volume} %`;
 
-    const dif_peso = pesoOrig.value - pesoUni.value
-    document.getElementById('dif_peso').value = `${dif_peso} Kilos`;
+    const diferenca_peso = peso_origem.value - peso_uni.value
+    document.getElementById('diferenca_peso').value = `${diferenca_peso} Kilos`;
 
-    const dif_litros_peso = (dif_peso / dens_V_Uni.value).toFixed(0)
-    document.getElementById('dif_litros_peso').value = `${dif_litros_peso} litros`;
+    const diferenca_litros_peso = (diferenca_peso / densidade_vinte_uni.value).toFixed(0)
+    document.getElementById('diferenca_litros_peso').value = `${diferenca_litros_peso} litros`;
 
-    const dif_litros_dreno = Number(dif_litros_peso) + Number(volDren.value)
-    document.getElementById('desc_falta').value = `${dif_litros_dreno} litros`;
+    const diferenca_litros_drenagem = Number(diferenca_litros_peso) + Number(volume_drenado.value)
+    document.getElementById('desconto_falta').value = `${diferenca_litros_drenagem} litros`;
 
-    const perc_result = (((dif_vol_vinte - dif_litros_dreno) / vol_vinte_orig.value)*100).toFixed(2)
-    document.getElementById('perc_falta').value = `${perc_result} %`;
+    const percentual_resultado = (((diferenca_volume_vinte - diferenca_litros_drenagem) / volume_vinte_origem.value) * 100).toFixed(2)
+    document.getElementById('percentual_falta').value = `${percentual_resultado} %`;
 
-    if (perc_result >= -0.4 && perc_result <= 0.4) {
+    if (percentual_resultado >= -0.4 && percentual_resultado <= 0.4) {
         document.getElementById("resposta").style.backgroundColor = "green";
     } else {
         document.getElementById("resposta").style.backgroundColor = "red";
@@ -40,15 +40,15 @@ const calcular = (number) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const vv = vol_vinte_orig.value;
-    const vvu = vol_V_Uni.value;
-    const dvu = dens_V_Uni.value;
-    const po = pesoOrig.value;
-    const pu = pesoUni.value;
-    const vd = volDren.value;
+    const volumeVinteOrigem = volume_vinte_origem.value;
+    const volumeVinteUni = volume_vinte_uni.value;
+    const densidadeVinteUni = densidade_vinte_uni.value;
+    const pesoOrigem = peso_origem.value;
+    const pesoUni = peso_uni.value;
+    const volumeDrenado = volume_drenado.value;
 
 
-    if(vv && vvu && dvu && po && pu && vd) {
-        calcular(vv);
+    if (volumeVinteOrigem && volumeVinteUni && densidadeVinteUni && pesoOrigem && pesoUni && volumeDrenado) {
+        calcular(volumeVinteOrigem);
     }
 });

@@ -9,10 +9,11 @@
 html {
     @media screen and (min-width: 100px) and (max-width: 350px) {
         font-size: 10px;
-    } 
+    }
 
     @media screen and (min-width: 351px) and (max-width: 575.98px) {
-        font-size: 14.8px; /*redmi note 11 pro 5G*/
+        font-size: 14.8px;
+        /*redmi note 11 pro 5G*/
     }
 
     @media screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -28,17 +29,19 @@ html {
     }
 
     @media screen and (min-width: 1200px) {
-        font-size: 22px; /*notebook*/
+        font-size: 22px;
+        /*notebook*/
     }
 
     @media screen and (min-width: 1800px) {
-        font-size: 32px; /*tela grande*/
+        font-size: 32px;
+        /*tela grande*/
     }
 
 
 }
 
-.form-principal {
+.formulario_principal {
     max-width: 25rem;
     height: 27rem;
     margin: 0.9rem auto;
@@ -48,20 +51,20 @@ html {
     border: 1px solid black;
 }
 
-.form-principal header {
+.formulario_principal header {
     text-align: center;
     padding: 0 0.2rem 0.2rem;
     border-bottom: 0.15rem solid #ccc;
 }
 
-.form-principal header img {
+.formulario_principal header img {
     width: 4.4rem;
     height: 2.4rem;
 }
 
-.form-principal p {
+.formulario_principal p {
     font-size: 0.8rem;
-    font-weight: bold;    
+    font-weight: bold;
     text-align: center;
     margin-top: 0.7rem;
 }
@@ -94,7 +97,7 @@ html {
     margin-bottom: 0.2rem;
 }
 
-.form-preencher{
+.preencher_formulario {
     height: 12rem;
     margin-top: 1rem;
     display: flex;
@@ -103,7 +106,7 @@ html {
     align-items: center;
 }
 
-.form-preencher input {
+.preencher_formulario input {
     padding: 0.4rem;
     width: 10rem;
     text-align: center;
@@ -112,7 +115,7 @@ html {
     border-radius: 0.3rem;
 }
 
-.form-resposta {
+.formulario_resposta {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -120,7 +123,7 @@ html {
     align-items: center;
 }
 
-.form-resposta input {
+.formulario_resposta input {
     padding: 0.2rem;
     width: 8rem;
     text-align: center;
@@ -150,4 +153,3 @@ button:hover {
     color: #fff;
     font-weight: bold;
 }
-
