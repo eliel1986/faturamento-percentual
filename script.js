@@ -1,119 +1,154 @@
 const form = document.querySelector("#form");
-const volume_vinte_origem = document.querySelector("#volume_vinte_origem");
-const volume_vinte_uni = document.querySelector("#volume_vinte_uni");
-const densidade_vinte_uni = document.querySelector("#densidade_vinte_uni");
-const peso_origem = document.querySelector("#peso_origem");
-const peso_uni = document.querySelector("#peso_uni");
-const volume_drenado = document.querySelector("#volume_drenado");
+const dens_orig = document.querySelector("#dens_orig");
+const dens_dest = document.querySelector("#dens_dest");
+const peso_orig = document.querySelector("#peso_orig");
+const peso_dest = document.querySelector("#peso_dest");
+const vol_dren = document.querySelector("#vol_dren");
+const vol_vinte_ori = document.querySelector("#vol_vinte_origem");
 
 const calcular = () => {
 
     document.getElementById("formulario_principal").style.display = "none";
     document.getElementById("resposta").style.display = "block";
 
-    const diferenca_volume_vinte = volume_vinte_origem.value - volume_vinte_uni.value;
-    document.getElementById('diferenca_volume_vinte').value = `${diferenca_volume_vinte} litros`;
+    const densOrig = document.getElementById('dens_orig').value;
+	const densDest = document.getElementById('dens_dest').value;
+	const pesoOrig = document.getElementById('peso_orig').value;
+	const pesoDest = document.getElementById('peso_dest').value;
+    const volDren = document.getElementById('vol_dren').value;
+    const volVinteOrig = document.getElementById('vol_vinte_origem').value;
 
-    const diferenca_litros_volume = ((diferenca_volume_vinte / volume_vinte_origem.value) * 100).toFixed(2);
-    document.getElementById('diferenca_litros_volume').value = `${diferenca_litros_volume} %`;
+    document.getElementById('vol_vint_orig').value = `${volVinteOrig} litros`;
 
-    const diferenca_peso = (peso_origem.value - peso_uni.value) * -1;
-    if (peso_origem.value < peso_uni.value) {
-        peso_origem.value - peso_uni.value
-    }
-    document.getElementById('diferenca_peso').value = `${diferenca_peso} Kilos`;
+    	const pesoDest_densDest = (pesoDest / densDest).toFixed(0);		
+		document.getElementById('pDest_dDest').value = `${pesoDest_densDest} litros`;
 
-    const diferenca_litros_peso = (diferenca_peso / densidade_vinte_uni.value).toFixed(0);
-    document.getElementById('diferenca_litros_peso').value = `${diferenca_litros_peso} litros`;
+		const pesoDest_densOrig = (pesoDest / densOrig).toFixed(0);		
+		document.getElementById('pDest_dOrig').value = `${pesoDest_densOrig} litros`;
 
-    const diferenca_litros_drenagem = Number(diferenca_litros_peso) + Number(volume_drenado.value);
-    document.getElementById('desconto_falta').value = `${diferenca_litros_drenagem} litros`;
+		const dif_Dens = (pesoDest_densDest - pesoDest_densOrig).toFixed(0);
+		if (dif_Dens < 0) {
+			document.getElementById('dif_Dens').style.backgroundColor = 'red';
+		}
+		else {
+			document.getElementById('dif_Dens').style.backgroundColor = 'green';
+		}
+		document.getElementById('dif_Dens').value = `${dif_Dens} litros`;
 
-    const percentual_resultado = (((diferenca_volume_vinte - diferenca_litros_drenagem) / volume_vinte_origem.value) * 100).toFixed(2);
-    document.getElementById('percentual_falta').value = `${percentual_resultado} %`;
+		const difPesos = (pesoDest - pesoOrig).toFixed(0);
+		document.getElementById('pDest_pOrig').value = `${difPesos} Kilos`;
+		if (difPesos < 0) {
+			document.getElementById('pDest_pOrig').style.backgroundColor = 'red';
+		}
+		else {
+			document.getElementById('pDest_pOrig').style.backgroundColor = 'green';
+		}
 
-    if (percentual_resultado >= -0.4 && percentual_resultado <= 0.4) {
-        document.getElementById("resposta").style.backgroundColor = "green";
-    } else {
-        document.getElementById("resposta").style.backgroundColor = "red";
-    }
-}
+		const difPesosdensDest = (difPesos / densDest).toFixed(0);
+		document.getElementById('dif_Peso').value = `${difPesosdensDest} litros`;
+		if (difPesosdensDest < 0) {
+			document.getElementById('dif_Peso').style.backgroundColor = 'red';
+		}
+		else {
+			document.getElementById('dif_Peso').style.backgroundColor = 'green';
+		}
 
-function geraErroNaDensidade() {
-    densidade_vinte_uni.style.backgroundColor = 'red'
-    densidade_vinte_uni.focus();
-}
+		const apurado = Number(dif_Dens) + Number(difPesosdensDest) + Number(volDren);
+		document.getElementById('result').value = `${apurado} litros`;
+		if (apurado <= 0) {
+			document.getElementById('result').style.backgroundColor = 'red';
+		}
+		else {
+			document.getElementById('result').style.backgroundColor = 'green';
+		}
 
-function verificarDensidade(densidade) {
-    densidade_vinte_uni.style.backgroundColor = 'white'
+        const perc = ((apurado / volVinteOrig) * 100 ).toFixed(2);
+        document.getElementById('percent').value = `${perc} %`;
 
-    if (!densidade) return;
-
-    if (!densidade.includes('.')) {
-        densidade_vinte_uni.value = `.${densidade}`;
-        return;
-    }
-
-    const primeiraLetra = densidade.charAt(0);
-
-    if (primeiraLetra === '0') {
-        const segundaLetra = densidade.charAt(1);
-
-        if (segundaLetra !== '.') {
-            geraErroNaDensidade();
-            return;
+        if (perc >= -0.4 && perc <= 0.4) {
+            document.getElementById("inform").style.backgroundColor = "green";
+            document.getElementById("inform").value = "LIBERADO";
+        } else {
+            document.getElementById("inform").style.backgroundColor = "red";
+            document.getElementById("inform").value = "CONTRA PROVA";
         }
-    }
 
-    if (primeiraLetra !== '.') {
-        geraErroNaDensidade();
-        return;
-    }
-}
+    
+	}
 
-function removePonto(input) {
-    const valor = input.value;
 
-    if (valor.includes('.')) {
-        input.value = valor.replace('.', '')
-    }
-}
 
-volume_vinte_origem.addEventListener('blur', () => {
-    removePonto(volume_vinte_origem);
-})
 
-volume_vinte_uni.addEventListener('blur', () => {
-    removePonto(volume_vinte_uni);
-})
+// function geraErroNaDensidade() {
+//     dens_orig.style.backgroundColor = 'red'
+//     dens_orig.focus();
 
-densidade_vinte_uni.addEventListener('blur', (e) => {
-    verificarDensidade(e.target.value);
-})
+//     dens_dest.style.backgroundColor = 'red'
+//     dens_dest.focus();
+// }
 
-peso_origem.addEventListener('blur', () => {
-    removePonto(peso_origem);
-})
+// function verificarDensidade(densidade) {
+//     dens_orig.style.backgroundColor = 'white'
+//     dens_dest.style.backgroundColor = 'white'
 
-peso_uni.addEventListener('blur', () => {
-    removePonto(peso_uni);
-})
+//     if (!densidade) return;
 
-volume_drenado.addEventListener('blur', () => {
-    removePonto(volume_drenado);
-})
+//     if (!densidade.includes('.')) {
+//         dens_orig.value = `.${densidade}`;
+//         dens_dest.value = `.${densidade}`;
+//         return;
+//     }
+
+//     const primeiraLetra = densidade.charAt(0);
+
+//     if (primeiraLetra === '0') {
+//         const segundaLetra = densidade.charAt(1);
+
+//         if (segundaLetra !== '.') {
+//             geraErroNaDensidade();
+//             return;
+//         }
+//     }
+
+//     if (primeiraLetra !== '.') {
+//         geraErroNaDensidade();
+//         return;
+//     }
+// }
+
+// function removePonto(input) {
+//     const valor = input.value;
+
+//     if (valor.includes('.')) {
+//         input.value = valor.replace('.', '')
+//     }
+// }
+
+// dens_orig.addEventListener('blur', (e) => {
+//     verificarDensidade(e.target.value);
+// })
+
+// dens_dest.addEventListener('blur', (e) => {
+//     verificarDensidade(e.target.value);
+// })
+
+// peso_orig.addEventListener('blur', () => {
+//     removePonto(peso_orig);
+// })
+
+// peso_dest.addEventListener('blur', () => {
+//     removePonto(peso_dest);
+// })
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const volumeVinteOrigem = volume_vinte_origem.value;
-    const volumeVinteUni = volume_vinte_uni.value;
-    const densidadeVinteUni = densidade_vinte_uni.value;
-    const pesoOrigem = peso_origem.value;
-    const pesoUni = peso_uni.value;
-    const volumeDrenado = volume_drenado.value;
+    const densOrig = dens_orig.value;
+    const densDest = dens_dest.value;
+    const pesoOrig = peso_orig.value;
+    const pesoDest = peso_dest.value;
 
-    if (volumeVinteOrigem && volumeVinteUni && densidadeVinteUni && pesoOrigem && pesoUni && volumeDrenado) {
+    if (densOrig && densDest && pesoOrig && pesoDest) {
         calcular();
     }
 });

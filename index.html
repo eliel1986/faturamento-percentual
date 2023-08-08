@@ -21,14 +21,24 @@
         <form id="form" class="">
             <p>Preencha todos campos</p>
             <div class="preencher_formulario">
-                <input type="number" step="0.01" id="volume_vinte_origem" placeholder="Volume a 20 °C origem"
-                    required />
-                <input type="number" step="0.01" id="volume_vinte_uni" placeholder="Volume a 20 °C UNI" required />
-                <input type="number" step="0.0001" id="densidade_vinte_uni" placeholder="Densidade a 20 °C UNI"
-                    required />
-                <input type="number" step="0.01" id="peso_origem" placeholder="Peso origem" required />
-                <input type="number" step="0.01" id="peso_uni" placeholder="Peso UNI" required />
-                <input type="number" step="0.01" id="volume_drenado" placeholder="Volume drenado" required />
+                <p>Volume a 20 Origem</p>
+                <input type="number" step="0.01" id="vol_vinte_origem" placeholder="Litros">
+
+                <p>Densidade origem</p>
+                <input type="number" step="0.0001" id="dens_orig" placeholder="0.000">
+
+                <p>Densidade destino</p>
+                <input type="number" step="0.0001" id="dens_dest" placeholder="0.000">
+
+                <p>Peso origem</p>
+                <input type="number" step="0.01" id="peso_orig" placeholder="Kg">
+
+                <p>Peso destino</p>
+                <input type="number" step="0.01" id="peso_dest" placeholder="Kg">
+
+                <p>Volume drenado</p>
+                <input type="number" step="0.01" id="vol_dren" placeholder="Litros">
+
                 <button type="submit">Calcular</button>
                 <!-- <p>By Eliel Silva</p> -->
             </div>
@@ -36,22 +46,30 @@
     </div>
     <div class="resposta" id="resposta">
         <header>
-            <h2>Resultado</h2>
+            <img src="logo.png" alt="">
         </header>
         <form id="form" class="">
             <div class="formulario_resposta">
-                <p>Diferença VOLUME A 20 °C (LITROS)</p>
-                <input type="" id="diferenca_volume_vinte">
-                <p>Diferença VOLUME A 20 °C (%)</p>
-                <input type="" id="diferenca_litros_volume">
-                <p>Diferença (PESO)</p>
-                <input type="" id="diferenca_peso">
-                <p>Diferença litros (PESO)</p>
-                <input type="" id="diferenca_litros_peso">
-                <p>Desconto (DRENAGEM + DIF. PESO)</p>
-                <input type="" id="desconto_falta">
-                <p>Percentual FALTA (%)</p>
-                <input type="" id="percentual_falta">
+                <p>Volume a 20 Origem</p>
+                <input type="" id="vol_vint_orig">
+                <p>Peso Dest / Dens Dest</p>
+                <input type="" id="pDest_dDest">
+                <p>Peso Dest / Dens Orig</p>
+                <input type="" id="pDest_dOrig">
+                <p>Diferença Dens</p>
+                <input type="" id="dif_Dens">
+                <p>Peso Dest - Peso Orig</p>
+                <input type="" id="pDest_pOrig">
+                <p>Diferença Peso / Dens Dest</p>
+                <input type="" id="dif_Peso">
+                <p>RESULTADO</p>
+                <input type="" id="result">
+                <div class="inform">
+                    <p>PERCENTUAL</p>
+                <input type="" id="percent">
+                <input type="" id="inform">
+                </div>
+                
                 <button>Voltar </button>
             </div>
         </form>
