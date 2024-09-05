@@ -41,7 +41,7 @@ html {
 
 .formulario_principal {
     max-width: 25rem;
-    height: 27rem;
+    height: 28rem;
     margin: 0.9rem auto;
     background-color: #daecf6;
     padding: 1rem;
@@ -74,37 +74,6 @@ html {
     border-radius: 0.3rem;
 }
 
-.resposta {
-    background-color: #daecf6;
-
-    max-width: 25rem;
-    height: 27rem;
-    margin: 0.9rem auto;
-    /*background-color: #fdfdfd;*/
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid black;
-    display: none;
-}
-
-.resposta header img {
-    width: 4.4rem;
-    height: 2.4rem;
-}
-
-.resposta header {
-    text-align: center;
-    padding: 0 0.5rem 0.5rem;
-    border-bottom: 0.15rem solid #ccc;
-}
-
-.resposta p {
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.15rem;
-}
-
 .preencher_formulario {
     height: 12rem;
     margin-top: 1rem;
@@ -123,21 +92,49 @@ html {
     border-radius: 0.3rem;
 }
 
+.resposta {
+    background-color: #daecf6;
+    max-width: 25rem;
+    height: 28rem;
+    margin: 0.9rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    display: none;
+}
+
+.resposta header img {
+    width: 4rem;
+    height: 2rem;
+}
+
+.resposta header {
+    text-align: center;
+    padding: 0 0.05rem 0.05rem;
+    border-bottom: 0.15rem solid #ccc;
+}
+
+.resposta p {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario_resposta input {
+    padding: 0.20rem;
+    width: 9rem;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 0.55rem;
+    border-radius: 0.3rem;
+}
+
 .formulario_resposta {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.formulario_resposta input {
-    padding: 0.12rem;
-    width: 8rem;
-    text-align: center;
-    font-size: 0.7rem;
-    margin-bottom: 0.3rem;
-    border-radius: 0.3rem;
 }
 
 button {
@@ -153,7 +150,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.4s;
-    margin-top: 0.1rem;
+    margin-top: 0.25rem;
 }
 
 button:hover {
@@ -165,3 +162,4 @@ button:hover {
 .inform {
     text-align: center;
 }
+
