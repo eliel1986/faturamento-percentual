@@ -6,6 +6,16 @@ const peso_dest = document.querySelector("#peso_dest");
 const vol_dren = document.querySelector("#vol_dren");
 const vol_vinte_ori = document.querySelector("#vol_vinte_origem");
 
+	function mostrarAlerta() {
+		document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
+		document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
+		document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
+	}
+
+	function fecharAlerta() {
+	document.getElementById("alertaFundo").style.display = "none"; // Esconde o alerta
+}
+
 const calcular = () => {
 
 	document.getElementById("formulario_principal").style.display = "none";
@@ -74,25 +84,16 @@ const calcular = () => {
 	}
 }
 
-function mostrarAlerta() {
-	document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
-	document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
-	document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
-}
 
-function fecharAlerta() {
-	document.getElementById("alertaFundo").style.display = "none"; // Esconde o alerta
-}
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
-	function mostrarAlerta() {
-		document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
-		document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
-		document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
-	}
 
+
+
+	
+	
 	const densOrig = dens_orig.value;
 	const densDest = dens_dest.value;
 	const pesoOrig = peso_orig.value;
@@ -101,7 +102,7 @@ form.addEventListener("submit", (e) => {
 	if (pesoDest > pesoOrig) {
 		/* alert('Peso de destino não pode ser maior que peso de origem')
 		document.querySelector("#peso_dest").focus() */
-		mostrarAlerta()			
+		mostrarAlerta()	
 		return false
 	}
 	if (densOrig && densDest && pesoOrig && pesoDest) {

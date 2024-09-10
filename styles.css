@@ -187,6 +187,9 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1001;
+	align-items: center; /* Centraliza horizontalmente o conteúdo do box */
+            justify-content: center; /* Centraliza verticalmente o conteúdo do box */
+	
 }
 
 /* Estilo para o título da caixa de alerta */
