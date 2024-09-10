@@ -164,8 +164,6 @@ button:hover {
     text-align: center;
 }
 
-
-
 #alertaFundo {
     display: none;
     position: fixed;
@@ -179,8 +177,10 @@ button:hover {
 
 /* Estilos para a caixa de alerta */
 #alertaBox {
+    display: grid;
     background-color: white;
-    width: 300px;
+    width: 16rem;
+	height: 10rem;
     padding: 20px;
     margin: 100px auto;
     border-radius: 5px;
@@ -195,13 +195,14 @@ button:hover {
 /* Estilo para o título da caixa de alerta */
 #alertaTitulo {
     font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
             text-align: center;
 }
 
 #alertaMensagem{
-text-align: center
+text-align: center;
+	font-size: 0.8rem;
 }
 
 /* Estilo para o botão de fechar */
@@ -209,8 +210,8 @@ text-align: center
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
+    padding: 1rem;
+    margin-top: 0.6rem;
     cursor: pointer;
     border-radius: 5px;
 }
