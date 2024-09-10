@@ -74,6 +74,16 @@ const calcular = () => {
 	}
 }
 
+function mostrarAlerta() {
+	document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
+	document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
+	document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
+}
+
+function fecharAlerta() {
+	document.getElementById("alertaFundo").style.display = "none"; // Esconde o alerta
+}
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
@@ -83,8 +93,9 @@ form.addEventListener("submit", (e) => {
 	const pesoDest = peso_dest.value;
 
 	if (pesoDest > pesoOrig) {
-		alert('Peso de destino não pode ser maior que peso de origem')
-		document.querySelector("#peso_dest").focus()
+		/* alert('Peso de destino não pode ser maior que peso de origem')
+		document.querySelector("#peso_dest").focus() */
+		mostrarAlerta()
 		return false;
 	}
 	if (densOrig && densDest && pesoOrig && pesoDest) {
