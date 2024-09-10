@@ -96,7 +96,6 @@ form.addEventListener("submit", (e) => {
 		/* alert('Peso de destino não pode ser maior que peso de origem')
 		document.querySelector("#peso_dest").focus() */
 		mostrarAlerta()
-		fecharAlerta()
 		return false;
 	}
 	if (densOrig && densDest && pesoOrig && pesoDest) {
