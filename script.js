@@ -72,73 +72,7 @@ const calcular = () => {
             document.getElementById("inform").style.backgroundColor = "red";
             document.getElementById("inform").value = "CONTRA PROVA";
         }
-
-    
 	}
-
-
-
-
-// function geraErroNaDensidade() {
-//     dens_orig.style.backgroundColor = 'red'
-//     dens_orig.focus();
-
-//     dens_dest.style.backgroundColor = 'red'
-//     dens_dest.focus();
-// }
-
-// function verificarDensidade(densidade) {
-//     dens_orig.style.backgroundColor = 'white'
-//     dens_dest.style.backgroundColor = 'white'
-
-//     if (!densidade) return;
-
-//     if (!densidade.includes('.')) {
-//         dens_orig.value = `.${densidade}`;
-//         dens_dest.value = `.${densidade}`;
-//         return;
-//     }
-
-//     const primeiraLetra = densidade.charAt(0);
-
-//     if (primeiraLetra === '0') {
-//         const segundaLetra = densidade.charAt(1);
-
-//         if (segundaLetra !== '.') {
-//             geraErroNaDensidade();
-//             return;
-//         }
-//     }
-
-//     if (primeiraLetra !== '.') {
-//         geraErroNaDensidade();
-//         return;
-//     }
-// }
-
-// function removePonto(input) {
-//     const valor = input.value;
-
-//     if (valor.includes('.')) {
-//         input.value = valor.replace('.', '')
-//     }
-// }
-
-// dens_orig.addEventListener('blur', (e) => {
-//     verificarDensidade(e.target.value);
-// })
-
-// dens_dest.addEventListener('blur', (e) => {
-//     verificarDensidade(e.target.value);
-// })
-
-// peso_orig.addEventListener('blur', () => {
-//     removePonto(peso_orig);
-// })
-
-// peso_dest.addEventListener('blur', () => {
-//     removePonto(peso_dest);
-// })
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
