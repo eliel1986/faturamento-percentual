@@ -82,7 +82,10 @@ form.addEventListener("submit", (e) => {
     const pesoOrig = peso_orig.value;
     const pesoDest = peso_dest.value;
 
-    if (densOrig && densDest && pesoOrig && pesoDest) {
+    if (pesoDest > pesoOrig) {
+		alert('Peso de destino não pode ser maior que peso de origem')
+	}
+	if (densOrig && densDest && pesoOrig && pesoDest) {
         calcular();
     }
 });
