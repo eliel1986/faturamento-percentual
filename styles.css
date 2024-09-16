@@ -188,7 +188,7 @@ button:hover {
     position: relative;
     z-index: 1001;
 	align-items: center; /* Centraliza horizontalmente o conteúdo do box */
-            justify-content: center; /* Centraliza verticalmente o conteúdo do box */
+    justify-content: center; /* Centraliza verticalmente o conteúdo do box */
 	
 }
 
@@ -197,11 +197,11 @@ button:hover {
     font-weight: bold;
     font-size: 1.4rem;
     margin-bottom: 0.6rem;
-            text-align: center;
+    text-align: center;
 }
 
 #alertaMensagem{
-text-align: center;
+    text-align: center;
 	font-size: 0.8rem;
 }
 

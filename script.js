@@ -6,11 +6,29 @@ const peso_dest = document.querySelector("#peso_dest");
 const vol_dren = document.querySelector("#vol_dren");
 const vol_vinte_ori = document.querySelector("#vol_vinte_origem");
 
-	function mostrarAlerta() {
-		document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
-		document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
-		document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
-	}
+function validarFormato(input) {
+    // Verifica se o número tem exatamente três dígitos na parte decimal
+    var valor = input.value;
+    var mensagemErro = document.getElementById('erro');
+            
+    // Separa a parte inteira e a parte decimal
+    var partes = valor.split('.');
+
+    // Verifica se há uma parte decimal e se ela tem exatamente 3 dígitos
+    if (partes.length === 2 && partes[1].length === 4) {
+        mensagemErro.style.display = 'none'; // Esconde a mensagem de erro
+        input.setCustomValidity(""); // Limpa a mensagem de erro
+    } else {
+        mensagemErro.style.display = 'block'; // Mostra a mensagem de erro
+									input.setCustomValidity("Por favor, digitar no formato 0,0000 ou 0.0000"); // Define a mensagem personalizada
+    }
+}
+
+function mostrarAlerta() {
+	document.getElementById("alertaTitulo").innerHTML= "Atenção"; // Define o título
+	document.getElementById("alertaMensagem").innerHTML = "Peso de destino não pode ser maior que peso de origem"; // Define a mensagem
+	document.getElementById("alertaFundo").style.display = "block"; // Exibe o alerta
+}
 
 	function fecharAlerta() {
 	document.getElementById("alertaFundo").style.display = "none"; // Esconde o alerta
@@ -90,16 +108,13 @@ form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
 
-
-
-	
-	
 	const densOrig = dens_orig.value;
 	const densDest = dens_dest.value;
 	const pesoOrig = peso_orig.value;
 	const pesoDest = peso_dest.value;
 
 	if (pesoDest > pesoOrig) {
+		
 		/* alert('Peso de destino não pode ser maior que peso de origem')
 		document.querySelector("#peso_dest").focus() */
 		mostrarAlerta()	
