@@ -22,7 +22,7 @@
             <p>Preencha todos campos</p>
             <div class="preencher_formulario">
                 <p>Volume a 20 Origem</p>
-                <input type="number" step="0.01" id="vol_vinte_origem" placeholder="Litros">
+                <input type="number" step="0.01" id="vol_vinte_origem" placeholder="Litros" required>
                 <p>Densidade origem</p>
 				<input type="number" step="0.0001" id="dens_orig" placeholder="0,0000" required oninput="validarFormato(this)">
 				<span id="erro" class="erro"></span>
@@ -30,11 +30,11 @@
                 <input type="number" step="0.0001" id="dens_dest" placeholder="0,0000" required oninput="validarFormato(this)">
 				<span id="erro" class="erro"></span>
                 <p>Peso origem</p>
-                <input type="number" step="0.01" id="peso_orig" placeholder="Kg">
+                <input type="number" step="0.01" id="peso_orig" placeholder="Kg" required>
                 <p>Peso destino</p>
-                <input type="number" step="0.01" id="peso_dest" placeholder="Kg">
+                <input type="number" step="0.01" id="peso_dest" placeholder="Kg" required>
                 <p>Volume drenado</p>
-                <input type="number" step="0.01" id="vol_dren" placeholder="Litros">
+                <input type="number" step="0.01" id="vol_dren" placeholder="Litros" required>
                 <button type="submit">Calcular</button>
             </div>
         </form>
