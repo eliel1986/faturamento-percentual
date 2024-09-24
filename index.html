@@ -21,20 +21,20 @@
         <form id="form" class="">
             <p>Preencha todos campos</p>
             <div class="preencher_formulario">
-                <p>Volume a 20 Origem</p>
-                <input type="number" step="0.01" id="vol_vinte_origem" placeholder="Litros" required>
-                <p>Densidade origem</p>
-				<input type="number" step="0.0001" id="dens_orig" placeholder="0,0000"  oninput="validarFormato(this)" required>
+                <p>VOLUME A 20 ORIGEM</p>
+                <input type="number" step="0.01" id="vol_vinte_origem" placeholder="Litros">
+                <p>DENSIDADE A 20 ORIGEM</p>
+                <input type="number" step="0.0001" id="dens_orig" placeholder="0,0000" required oninput="validarFormato(this)">
 				<span id="erro" class="erro"></span>
-                <p>Densidade destino</p>
-                <input type="number" step="0.0001" id="dens_dest" placeholder="0,0000"  oninput="validarFormato(this)" required>
+                <p>DENSIDADE A 20 UNIBRASPE</p>
+                <input type="number" step="0.0001" id="dens_dest" placeholder="0,0000" required oninput="validarFormato(this)">
 				<span id="erro" class="erro"></span>
-                <p>Peso origem</p>
-                <input type="number" step="0.01" id="peso_orig" placeholder="Kg" required>
-                <p>Peso destino</p>
-                <input type="number" step="0.01" id="peso_dest" placeholder="Kg" required>
-                <p>Volume drenado</p>
-                <input type="number" step="0.01" id="vol_dren" placeholder="Litros" required>
+                <p>PESO ORIGEM</p>
+                <input type="number" step="0.01" id="peso_orig" placeholder="Kg">
+                <p>PESO UNIBRASPE</p>
+                <input type="number" step="0.01" id="peso_dest" placeholder="Kg">
+                <p>VOLUME DRENADO</p>
+                <input type="number" step="0.01" id="vol_dren" placeholder="Litros">
                 <button type="submit">Calcular</button>
             </div>
         </form>
@@ -46,24 +46,24 @@
         </header>
         <form id="form" class="">
             <div class="formulario_resposta">
-                <p>Volume a 20 Origem</p>
+                <p>VOLUME A 20 ORIGEM</p>
                 <input type="" id="vol_vint_orig">
-                <p>Peso Dest / Dens Dest</p>
+                <p>PESO UNIBRASPE / DENSIDADE UNIBRASPE</p>
                 <input type="" id="pDest_dDest">
-                <p>Peso Dest / Dens Orig</p>
+                <p>PESO UNIBRASPE / DENSIDADE ORIGEM</p>
                 <input type="" id="pDest_dOrig">
-                <p>Diferença Dens</p>
+                <p>DIFERENÇA DENSIDADES</p>
                 <input type="" id="dif_Dens">
-                <p>Peso Dest - Peso Orig</p>
+                <p>PESO UNIBRASPE - PESO ORIGEM</p>
                 <input type="" id="pDest_pOrig">
-                <p>Diferença Peso / Dens Dest</p>
+                <p>DIFERENÇA PESO / DENSIDADE UNIBRASPE</p>
                 <input type="" id="dif_Peso">
                 <p>RESULTADO</p>
                 <input type="" id="result">
                 <div class="inform">
-                    <p>PERCENTUAL</p>
-                    <input type="" id="percent">
-                    <input type="" id="inform">
+                <p>PERCENTUAL</p>
+                <input type="" id="percent">
+                <input type="" id="inform">
                 </div>
                 <button>Voltar </button>
             </div>
@@ -71,12 +71,12 @@
     </div>
 	
 	<div id="alertaFundo">
-        <div id="alertaBox">
-            <div id="alertaTitulo"></div>
-            <div id="alertaMensagem"></div>
-            <button id="alertaFechar" onclick="fecharAlerta()">Fechar</button>
-        </div>
-    </div>
+                <div id="alertaBox">
+                    <div id="alertaTitulo"></div>
+                    <div id="alertaMensagem"></div>
+                    <button id="alertaFechar" onclick="fecharAlerta()">Fechar</button>
+                </div>
+            </div>
 	<script src="./script.js" defer></script>
 </body>
 
